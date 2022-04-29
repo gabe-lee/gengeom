@@ -1,0 +1,4 @@
+github.com/gabe-lee/genmath v1.1.0 h1:lWyWC7Qvd6ZjzhFHRJqXtRpCDNO3zhtYxJMMDfewdiA=
+github.com/gabe-lee/genmath v1.1.0/go.mod h1:bT45kaN5bu3kZW562244x7ze+Ha8iGAAepHZTIS4zgQ=
+github.com/gabe-lee/genvecs v0.3.0 h1:riQD3Aza20AgEQ2uWE560Y5SxSoXAoJke3XW5lNQkcU=
+github.com/gabe-lee/genvecs v0.3.0/go.mod h1:01fiZT2aCeXD2ZbR2W/5HiT5875Tw5C3CsMVrv65A6Q=
