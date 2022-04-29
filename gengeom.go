@@ -38,6 +38,9 @@ func PointsOnRing[T_ROT math.Real, T_VEC math.Real, I_CNT math.Integer](rotation
 	}
 	return points
 }
+func PointsOnRingDeg[T_ROT math.Real, T_VEC math.Real, I_CNT math.Integer](degrees T_ROT, radiusInner T_VEC, radiusOuter T_VEC, center vecs.Vec2[T_VEC], count I_CNT) []vecs.Vec2[T_VEC] {
+	return PointsOnRing(float64(degrees)*math.RAD2DEG, radiusInner, radiusOuter, center, count)
+}
 
 func Circumference[T math.Real](radius T) T {
 	return T(math.TAU * float64(radius))
