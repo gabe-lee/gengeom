@@ -6,13 +6,13 @@ import (
 )
 
 func PointOnCircle[T_ROT math.Real, T_VEC math.Real](radians T_ROT, radius T_VEC, center vecs.Vec2[T_VEC]) vecs.Vec2[T_VEC] {
-	sin := math.Sin(radians)
-	cos := math.Cos(radians)
-	x, y := T_VEC(cos)*radius, T_VEC(sin)*radius
+	sin := math.Sin(float64(radians))
+	cos := math.Cos(float64(radians))
+	x, y := T_VEC(cos*float64(radius)), T_VEC(sin*float64(radius))
 	return vecs.Vec2[T_VEC]{x, y}.Add(center)
 }
 func PointOnCircleDeg[T_ROT math.Real, T_VEC math.Real](degrees T_ROT, radius T_VEC, center vecs.Vec2[T_VEC]) vecs.Vec2[T_VEC] {
-	return PointOnCircle(T_ROT(float64(degrees)*math.RAD2DEG), radius, center)
+	return PointOnCircle(float64(degrees)*math.RAD2DEG, radius, center)
 }
 
 func PointsOnCircle[T_ROT math.Real, T_VEC math.Real, I_CNT math.Integer](rotationRadians T_ROT, radius T_VEC, center vecs.Vec2[T_VEC], count I_CNT) []vecs.Vec2[T_VEC] {
